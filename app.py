@@ -94,7 +94,7 @@ def colaborativeFiltering_ItemBased(user_ratings, userID="672"):
 def index():
     return "This is the home route"
 
-@app.route("/recommendations/usercolaborativefiltering", methods=["GET","POST"])
+@app.route("/recommendations/usercolaborativefiltering", methods=["POST"])
 def user_colaborativefiltering() :
         userID = request.json["userID"]
         user_ratings = request.json["ratings"]
@@ -114,7 +114,7 @@ def user_colaborativefiltering() :
     
     
     
-@app.route("/recommendations/itemcolaborativefiltering", methods=["GET","POST"])
+@app.route("/recommendations/itemcolaborativefiltering", methods=["POST"])
 def item_colaborativefiltering():
         userID = request.json["userID"]
         user_ratings = request.json["ratings"]
