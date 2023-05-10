@@ -113,14 +113,11 @@ def user_colaborativefiltering() :
         print(recommendations)
         reset_files()
         return jsonify(recommendations)
-    else:
-        return jsonify("Error: Method not supported")
-
+    
     
     
 @app.route("/recommendations/itemcolaborativefiltering", methods=["GET","POST"])
 def item_colaborativefiltering():
-    if request.method == 'POST':
         userID = request.json["userID"]
         user_ratings = request.json["ratings"]
         recommender_type = request.json["recommender_type"]
@@ -135,9 +132,7 @@ def item_colaborativefiltering():
         print(recommendations)
         reset_files()
         return jsonify(recommendations)
-    else:
-        return jsonify("Error: Method not supported")
-
+    
 # RunServer
 if __name__ == "__main__":
     app.run()
