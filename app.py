@@ -96,8 +96,6 @@ def index():
 
 @app.route("/recommendations/usercolaborativefiltering", methods=["GET","POST"])
 def user_colaborativefiltering() :
-
-    if request.method == 'POST':
         userID = request.json["userID"]
         user_ratings = request.json["ratings"]
 
